@@ -1,10 +1,12 @@
 package utils.rules;
 
+import utils.correlation.CorrelatorStateI;
 import utils.events.interfaces.EventBaseI;
-import utils.rules.interfaces.CorrelatorStateI;
 import utils.rules.interfaces.RuleI;
 
 public class RuleBase {
+	//Attributs 
+
 	//Constructeur :
 	public RuleBase() {
 		// TODO Auto-generated constructor stub

@@ -10,6 +10,10 @@ import utils.events.interfaces.EventI;
 public class EventBase implements EventBaseI {
 	
 	ArrayList<EventI> base;
+	
+	public EventBase() {
+		base = new ArrayList<EventI>();
+	}
 
 	@Override
 	public void addEvent(EventI e) {
@@ -41,6 +45,14 @@ public class EventBase implements EventBaseI {
 	public void clearEvents(Duration d) {
 		if(d==null)
 			base.clear();
+		else {
+			LocalTime ts = LocalTime.now().minus(d);
+			for (EventI e : base) {
+				LocalTime eventTimeStamp = e.getTimeStamp();
+				if(eventTimeStamp.isBefore(ts))
+					removeEvent(e);
+			}
+		}		
 	}
 
 }

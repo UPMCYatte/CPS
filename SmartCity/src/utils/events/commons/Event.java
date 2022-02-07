@@ -9,8 +9,8 @@ import utils.events.interfaces.EventI;
 /**
  * Creation d'une classe Event, representant un evenement. 
  * @author 3671586
- *
  */
+
 public abstract class Event implements EventI {
 	//Attributs
 	LocalTime timestamp;
