@@ -13,8 +13,8 @@ import utils.events.interfaces.EventI;
 
 public abstract class Event implements EventI {
 	//Attributs
-	LocalTime timestamp;
-	HashMap<String,Serializable> properties;
+	protected LocalTime timestamp;
+	protected HashMap<String,Serializable> properties;
 	
 	public Event() {
 		timestamp = LocalTime.now();
@@ -48,6 +48,11 @@ public abstract class Event implements EventI {
 	 */
 	public Serializable getPropertyValue(String name) {
 		return properties.get(name);
+	}
+	
+	
+	public boolean propertyEquals(String name, Serializable value) {
+		return this.getPropertyValue(name).equals(value);
 	}
 
 }
