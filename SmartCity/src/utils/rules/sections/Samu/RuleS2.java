@@ -3,10 +3,9 @@ package utils.rules.sections.Samu;
 import java.util.ArrayList;
 
 import utils.correlation.CorrelatorStateI;
-import utils.correlation.Samu.AmbulanceCorrelatorStateI;
 import utils.correlation.Samu.HealthCorrelatorStateI;
 import utils.events.commons.AbsolutePosition;
-import utils.events.commons.HEType;
+import utils.events.commons.health.HEType;
 import utils.events.commons.health.HealthEvent;
 import utils.events.interfaces.EventBaseI;
 import utils.events.interfaces.EventI;

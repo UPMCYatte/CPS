@@ -3,11 +3,8 @@ package utils.rules.sections.Samu;
 import java.util.ArrayList;
 
 import utils.correlation.CorrelatorStateI;
-import utils.correlation.Samu.EMSAgencyStatusCorrelator;
-import utils.correlation.Samu.HealthCorrelatorStateI;
+import utils.correlation.Samu.EMSStatusCorrelatorStateI;
 import utils.events.commons.health.AmbulanceEvent;
-import utils.events.commons.health.ConsciousFall;
-import utils.events.commons.health.InterventionEvent;
 import utils.events.interfaces.EventBaseI;
 import utils.events.interfaces.EventI;
 import utils.rules.interfaces.RuleI;
@@ -38,7 +35,7 @@ public class RuleS16 implements RuleI {
 
 	@Override
 	public void act(ArrayList<EventI> matchedEvents, CorrelatorStateI c) {
-		EMSAgencyStatusCorrelator ec = (EMSAgencyStatusCorrelator) c;
+		EMSStatusCorrelatorStateI ec = (EMSStatusCorrelatorStateI) c;
 		ec.AmbulanceAvailabilityOff();
 	}
 

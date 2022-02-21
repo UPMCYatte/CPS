@@ -3,7 +3,6 @@ package utils.rules.interfaces;
 import java.util.ArrayList;
 
 import utils.correlation.CorrelatorStateI;
-import utils.events.*;
 import utils.events.interfaces.EventBaseI;
 import utils.events.interfaces.EventI;
 

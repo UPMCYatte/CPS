@@ -1,7 +1,6 @@
 package utils.events.interfaces;
 
 import java.time.Duration;
-import java.time.LocalTime;
 
 public interface EventBaseI {
 	public void addEvent(EventI e);

@@ -1,19 +1,18 @@
 package utils.events.commons.health;
 
+
 import utils.events.commons.AbsolutePosition;
 import utils.events.commons.Event;
 import utils.events.interfaces.AtomicEventI;
 
-public class HealthEvent extends Event implements AtomicEventI {
-	/**
+public class HInterventionEvent extends Event implements AtomicEventI {
+/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private AbsolutePosition p;
-	
-	public HealthEvent(String personId, AbsolutePosition p, HEType t) {
+private AbsolutePosition p;
+	public HInterventionEvent(AbsolutePosition p, HEType t) {
 		this.p = p;
-		properties.put("personId", personId);
 		switch(t) {
 		case urgence : this.putProperty("type", "urgence"); break;
 		case medicale : this.putProperty("type", "medicale"); break;
@@ -24,7 +23,4 @@ public class HealthEvent extends Event implements AtomicEventI {
 	public AbsolutePosition getPosition() {
 		return p;
 	}
-
-
-
 }

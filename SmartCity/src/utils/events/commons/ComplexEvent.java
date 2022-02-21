@@ -1,15 +1,18 @@
 package utils.events.commons;
 
 import java.io.Serializable;
-import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Iterator;
+
 
 import utils.events.interfaces.ComplexEventI;
 import utils.events.interfaces.EventI;
 
 public class ComplexEvent extends Event implements ComplexEventI {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//Attributs
 	ArrayList<EventI> correlatedEvent;
 	

@@ -1,4 +1,5 @@
-ackage RuleTests.bouchons;
+package RuleTests.bouchons;
+
 
 import utils.correlation.Samu.AmbulanceCorrelatorStateI;
 import utils.events.commons.AbsolutePosition;
@@ -55,6 +56,18 @@ public class AmbulanceCorrelator implements AmbulanceCorrelatorStateI {
 	public void sendEvent(EventI e) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public boolean isEMSSender() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isEMSAuxAccessible() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

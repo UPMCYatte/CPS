@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import RuleTests.bouchons.HealthCorrelatorS2;
 import utils.events.commons.AbsolutePosition;
 import utils.events.commons.EventBase;
-import utils.events.commons.HEType;
+import utils.events.commons.health.HEType;
 import utils.events.commons.health.HealthEvent;
 import utils.events.interfaces.EventBaseI;
 import utils.events.interfaces.EventI;

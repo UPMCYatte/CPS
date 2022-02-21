@@ -53,4 +53,16 @@ public class HealthCorrelatorS2 implements HealthCorrelatorStateI {
 		
 	}
 
+	@Override
+	public boolean isEMSSender() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isEMSAuxAccessible() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

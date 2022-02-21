@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 import utils.correlation.CorrelatorStateI;
 import utils.correlation.Samu.HealthCorrelatorStateI;
-import utils.events.commons.health.HealthEvent;
-import utils.events.commons.Event;
 import utils.events.commons.health.*;
 import utils.events.interfaces.EventBaseI;
 import utils.events.interfaces.EventI;
@@ -16,8 +14,8 @@ public class RuleS9 implements RuleI {
 	@Override
 	public ArrayList<EventI> match(EventBaseI eb) {
 		EventI ie = eb.getEvent(0); //InterventionEvent
-		if(ie instanceof InterventionEvent && ie.getPropertyValue("type").equals("urgence")) 
-			if(ie instanceof InterventionEvent) {
+		if(ie instanceof HInterventionEvent && ie.getPropertyValue("type").equals("urgence")) 
+			if(ie instanceof HInterventionEvent) {
 				ArrayList<EventI> me = new ArrayList<>();
 				me.add(ie);
 				return me;

@@ -7,6 +7,11 @@ import utils.events.interfaces.ComplexEventI;
 import utils.events.interfaces.EventI;
 
 public class ConsciousFall extends ComplexEvent implements ComplexEventI {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public ConsciousFall(ArrayList<EventI> correlatedEvents) {
 		//Chute consciente de personne est un evenement complexe
 		//elle correspond à la correlation de deux événements atomiques

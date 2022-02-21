@@ -12,6 +12,10 @@ import utils.events.interfaces.EventI;
  */
 
 public abstract class Event implements EventI {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//Attributs
 	protected LocalTime timestamp;
 	protected HashMap<String,Serializable> properties;
@@ -50,9 +54,16 @@ public abstract class Event implements EventI {
 		return properties.get(name);
 	}
 	
-	
 	public boolean propertyEquals(String name, Serializable value) {
 		return this.getPropertyValue(name).equals(value);
+	}
+	
+	public void putProperty(String name, Serializable value) {
+		properties.put(name, value);
+	}
+
+	public void removeProperty(String name) {
+		properties.remove(name);
 	}
 
 }
